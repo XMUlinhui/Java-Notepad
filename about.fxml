@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="500.0" prefWidth="500.0">
+         <children>
+            <Text layoutX="31.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="欢迎使用本记事本，以下是软件说明：">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="31.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="软件为厦门大学软件工程18级JAVA课程期末项目">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="33.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="软件适用于Windows系统以及MAC系统">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="29.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="源代码开源在作者的Github中：https://github.com/XMUlinhui" wrappingWidth="465.046875">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="32.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="源代码仅供学习参考，禁止抄袭，欢迎提出修改意见！" wrappingWidth="430.751953125">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="34.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text layoutX="34.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="功能与Windows系统自带的记事本功能相近，基本实现了记事本功能">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

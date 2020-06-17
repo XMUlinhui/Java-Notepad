@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane fx:id="gridpane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="500.0" prefWidth="550.0">
+         <children>
+            <Text layoutX="14.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="字体(F)：" />
+            <ListView fx:id="ziti" layoutX="14.0" layoutY="62.0" prefHeight="244.0" prefWidth="200.0" />
+            <TextField editable="false" layoutX="14.0" layoutY="39.0" prefHeight="23.0" prefWidth="200.0" fx:id="xuanzeziti" />
+            <Text layoutX="241.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="字形(Y)：" />
+            <TextField editable="false" layoutX="241.0" layoutY="39.0" fx:id="xuanzezixing" />
+            <ListView fx:id="zixing" layoutX="241.0" layoutY="62.0" prefHeight="244.0" prefWidth="161.0" />
+            <Text layoutX="425.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="大小(S)：" />
+            <TextField editable="false" layoutX="425.0" layoutY="39.0" prefHeight="23.0" prefWidth="115.0" fx:id="xuanzedaxiao" />
+            <ListView fx:id="daxiao" layoutX="425.0" layoutY="62.0" prefHeight="244.0" prefWidth="115.0" />
+            <Text layoutX="14.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="示例：">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Text>
+            <Label fx:id="shili" layoutX="19.0" layoutY="361.0" text="字体示例 Aa Bb" textAlignment="CENTER">
+               <font>
+                  <Font size="72.0" />
+               </font>
+            </Label>
+            <Button fx:id="change_font" layoutX="346.0" layoutY="463.0" mnemonicParsing="false" onAction="#OnButtonChange" prefHeight="23.0" prefWidth="78.0" text="确定" />
+            <Button fx:id="quxiao" layoutX="448.0" layoutY="463.0" mnemonicParsing="false" onAction="#OnButtonCancel" prefHeight="23.0" prefWidth="78.0" text="取消" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="500.0" prefWidth="500.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Text layoutX="39.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="如出现问题或有更好意见欢迎联系：" wrappingWidth="383.0">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="65.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="作者：林晖">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="65.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QQ：1016234884">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="65.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="邮箱：1016234884@qq.com">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="65.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Github：https://github.com/XMUlinhui">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

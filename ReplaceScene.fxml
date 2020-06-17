@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane fx:id="pane" prefHeight="200.0" prefWidth="430.0">
+         <children>
+            <Text layoutX="24.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="查找内容(N)：">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="chazhaoneirong" layoutX="121.0" layoutY="23.0" />
+            <Text layoutX="24.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="替换为(P)：">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="tihuanwei" layoutX="121.0" layoutY="54.0" />
+            <Button fx:id="chazhaoxiayige" layoutX="312.0" layoutY="23.0" mnemonicParsing="false" onAction="#find_next_word" text="查找下一个(F)" />
+            <Button fx:id="tihuan" layoutX="312.0" layoutY="54.0" mnemonicParsing="false" onAction="#exchange_word" prefHeight="23.0" prefWidth="90.0" text="替换(R)" />
+            <Button fx:id="quanbutihuan" layoutX="312.0" layoutY="88.0" mnemonicParsing="false" onAction="#replace_all_word" prefHeight="23.0" prefWidth="90.0" text="全部替换(A)" />
+            <Button fx:id="quxiao" layoutX="312.0" layoutY="120.0" mnemonicParsing="false" onAction="#onButtonCancel" prefHeight="23.0" prefWidth="90.0" text="取消" />
+            <CheckBox fx:id="qufendaxiaoxie" layoutX="34.0" layoutY="143.0" mnemonicParsing="false" text="区分大小写(C)" />
+            <CheckBox layoutX="33.0" layoutY="172.0" mnemonicParsing="false" text="循环(R)" fx:id="xunhuan" />
+         </children></Pane>
+   </children>
+</GridPane>

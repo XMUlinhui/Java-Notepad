@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane fx:id="gridpane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="160.0" prefWidth="430.0" GridPane.columnIndex="1">
+         <children>
+            <Text layoutX="8.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="查找内容(N):" />
+            <TextField fx:id="chazhaoneirong" layoutX="87.0" layoutY="26.0" prefHeight="23.0" prefWidth="213.0" />
+            <Button fx:id="chazhaoxiayige" layoutX="315.0" layoutY="26.0" mnemonicParsing="false" onAction="#find_next" prefHeight="23.0" prefWidth="101.0" text="查找下一个(F)" />
+            <Button fx:id="cancel_button" layoutX="315.0" layoutY="69.0" mnemonicParsing="false" onAction="#on_cancel_button" prefHeight="23.0" prefWidth="101.0" text="取消" />
+            <Text layoutX="194.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="方向" />
+            <CheckBox fx:id="qufendaxiaoxie" layoutX="21.0" layoutY="92.0" mnemonicParsing="false" text="区分大小写(C)" />
+            <CheckBox layoutX="21.0" layoutY="123.0" mnemonicParsing="false" text="循环(R)" fx:id="xunhuan" />
+            <RadioButton layoutX="187.0" layoutY="100.0" mnemonicParsing="false" text="向上(U)" fx:id="xiangshang">
+               <toggleGroup>
+                  <ToggleGroup fx:id="direction" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="260.0" layoutY="100.0" mnemonicParsing="false" selected="true" text="向下(D)" toggleGroup="$direction" fx:id="xiangxia" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>

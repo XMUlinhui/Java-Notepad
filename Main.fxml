@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane fx:id="gridpane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <BorderPane fx:id="borderpane" prefHeight="800.0" prefWidth="1200.0">
+         <top>
+            <MenuBar fx:id="menubar" prefHeight="25.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu fx:id="wenjian" mnemonicParsing="false" text="文件(F)">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#new_txt" text="新建(N)" fx:id="xinjian" />
+                        <MenuItem mnemonicParsing="false" onAction="#new_window" text="新窗口(W)" fx:id="xinchuangkou" />
+                        <MenuItem fx:id="dakai" mnemonicParsing="false" onAction="#open_file" text="打开(O)..." />
+                        <MenuItem fx:id="baocun" mnemonicParsing="false" onAction="#save_file" text="保存(S)" />
+                        <MenuItem fx:id="lingcunwei" mnemonicParsing="false" onAction="#save_as" text="另存为(A)..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="yemianshezhi" mnemonicParsing="false" onAction="#page_set" text="页面设置(U)..." />
+                        <MenuItem fx:id="dayin" mnemonicParsing="false" onAction="#print_txt" text="打印(P)..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="tuichu" mnemonicParsing="false" onAction="#exit_main" text="退出(X)" />
+                  </items>
+                </Menu>
+                <Menu fx:id="bianji" mnemonicParsing="false" text="编辑(E)">
+                  <items>
+                    <MenuItem fx:id="chexiao" mnemonicParsing="false" onAction="#undo_button" text="撤销(U)" />
+                        <MenuItem fx:id="chongzuo" mnemonicParsing="false" onAction="#redo_button" text="重做(R)" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="jianqie" mnemonicParsing="false" onAction="#cut_button" text="剪切(T)" />
+                        <MenuItem fx:id="fuzhi" mnemonicParsing="false" onAction="#copy_button" text="复制(C)" />
+                        <MenuItem fx:id="zhantie" mnemonicParsing="false" onAction="#paste_button" text="粘贴(P)" />
+                        <MenuItem fx:id="shanchu" mnemonicParsing="false" onAction="#del_button" text="删除(L)" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="sousuo" mnemonicParsing="false" onAction="#search_internet" text="使用Bing搜索..." />
+                        <MenuItem fx:id="chazhao" mnemonicParsing="false" onAction="#find_word" text="查找(F)..." />
+                        <MenuItem fx:id="chazhaoxiayige" mnemonicParsing="false" onAction="#find_next_word" text="查找下一个(N)" />
+                        <MenuItem fx:id="chazhaoshangyige" mnemonicParsing="false" onAction="#find_prev_word" text="查找上一个(V)" />
+                        <MenuItem fx:id="tihuan" mnemonicParsing="false" onAction="#replace_scene" text="替换(R)..." />
+                        <MenuItem fx:id="zhuandao" mnemonicParsing="false" onAction="#transfer_to" text="转到(G)..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="quanxuan" mnemonicParsing="false" onAction="#select_all" text="全选(A)" />
+                        <MenuItem fx:id="shijian" mnemonicParsing="false" onAction="#add_time" text="时间/日期(D)" />
+                  </items>
+                </Menu>
+                <Menu fx:id="geshi" mnemonicParsing="false" text="格式(O)">
+                  <items>
+                        <CheckMenuItem fx:id="zidonghuanhang" mnemonicParsing="false" text="自动换行(W)" />
+                        <MenuItem fx:id="ziti" mnemonicParsing="false" onAction="#choose_font" text="字体(F)..." />
+                  </items>
+                </Menu>
+                  <Menu fx:id="chakan" mnemonicParsing="false" text="查看(V)">
+                    <items>
+                        <Menu fx:id="suofang" mnemonicParsing="false" text="缩放(Z)">
+                          <items>
+                            <MenuItem fx:id="fangda" mnemonicParsing="false" onAction="#zoom_in" text="放大(I)" />
+                              <MenuItem fx:id="suoxiao" mnemonicParsing="false" onAction="#zoom_out" text="缩小(O)" />
+                              <MenuItem fx:id="huifumorensuofang" mnemonicParsing="false" onAction="#turn_zoom_to_one" text="恢复默认缩放" />
+                          </items>
+                        </Menu>
+                        <CheckMenuItem fx:id="zhuangtailan" mnemonicParsing="false" text="状态栏(S)" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="帮助(H)">
+                    <items>
+                      <MenuItem fx:id="chakanbangzhu" mnemonicParsing="false" onAction="#look_for_help" text="查看帮助(H)" />
+                        <MenuItem fx:id="fasongfankui" mnemonicParsing="false" onAction="#feedback_way" text="发送反馈(F)" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="guanyujishiben" mnemonicParsing="false" onAction="#about_software" text="关于记事本(A)" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <TextArea fx:id="textarea" prefHeight="774.0" prefWidth="1200.0" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <GridPane fx:id="zhuangtai" prefHeight="25.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="771.0" minWidth="10.0" prefWidth="600.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="228.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.0" minWidth="10.0" prefWidth="176.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="196.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="suofangbili" prefHeight="22.0" prefWidth="176.0" text="缩放比例：100%" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="bianma" prefHeight="22.0" prefWidth="256.0" text="Windows(CRLF)" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="weizhi" prefHeight="22.0" prefWidth="609.0" text="第 1 行，第 1 列" translateX="20.0" GridPane.halignment="LEFT">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="260.0" text="文本编码：UTF-8" GridPane.columnIndex="3" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</GridPane>
